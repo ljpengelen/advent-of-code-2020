@@ -9,22 +9,22 @@
   (map #(Integer/parseInt %) strings))
 
 (defn twenty-twenty
-  [pair]
-  (= 2020 (apply + pair)))
+  [tuple]
+  (= 2020 (apply + tuple)))
 
 (defn mult
-  [pair]
-  (apply * pair))
+  [tuple]
+  (apply * tuple))
 
 (defn run
   [args]
   (let [size (get args :size 2)
-        pairs (-> "resources/day1.txt"
+        tuples (-> "resources/day1.txt"
                   (slurp)
                   (split-lines)
                   (to-integers)
                   (combinations size))
-        result (->> pairs
+        result (->> tuples
                     (filter twenty-twenty)
                     (map mult))]
     (dorun (println result))))
