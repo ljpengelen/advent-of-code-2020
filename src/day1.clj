@@ -7,7 +7,7 @@
   [strings]
   (map #(Integer/parseInt %) strings))
 
-(defn twenty-twenty
+(defn twenty-twenty?
   [tuple]
   (= 2020 (apply + tuple)))
 
@@ -24,6 +24,6 @@
                   (to-integers)
                   (combinations size))
         result (->> tuples
-                    (filter twenty-twenty)
+                    (filter twenty-twenty?)
                     (map mult))]
     (dorun (println result))))

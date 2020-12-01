@@ -7,7 +7,7 @@
   [strings]
   (map #(Integer/parseInt %) strings))
 
-(defn twenty-twenty
+(defn twenty-twenty?
   [tuple]
   (= 2020 (apply + tuple)))
 
@@ -16,7 +16,7 @@
   (apply * tuple))
 
 (def xf (comp
-          (filter twenty-twenty)
+          (filter twenty-twenty?)
           (map mult)))
 
 (defn run
