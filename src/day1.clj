@@ -1,6 +1,5 @@
 (ns day1
   (:require
-    [clojure.java.io :refer [resource]]
     [clojure.math.combinatorics :refer [combinations]]
     [clojure.string :refer [split-lines]]))
 
