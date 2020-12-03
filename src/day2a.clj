@@ -1,6 +1,5 @@
 (ns day2a
   (:require
-    [clojure.math.combinatorics :refer [combinations]]
     [clojure.string :refer [split-lines]]))
 
 (defn to-int
