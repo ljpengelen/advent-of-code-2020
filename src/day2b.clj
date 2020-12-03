@@ -34,4 +34,4 @@
                     (map match)
                     (filter valid?)
                     (count))]
-    (dorun (println result))))
+    (println result)))
