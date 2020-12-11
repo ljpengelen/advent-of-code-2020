@@ -23,4 +23,4 @@
                     (filter twenty-twenty?)
                     (first)
                     (apply *))]
-    (dorun (println result))))
+    (println result)))

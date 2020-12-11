@@ -26,4 +26,4 @@
         result (->> tuples
                     (filter twenty-twenty?)
                     (map mult))]
-    (dorun (println result))))
+    (println result)))
