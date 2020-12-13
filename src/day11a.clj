@@ -43,7 +43,7 @@
                 current
                 (recur next)))))
 
-(defn count-empty [layout]
+(defn count-occupied [layout]
     (as-> layout l
         (flatten l)
         (frequencies l)
@@ -57,5 +57,5 @@
                   (mapv #(str/split % #"")))
         result (-> layout
                     occupy-or-leave-all
-                    count-empty)]
+                    count-occupied)]
     (pprint result)))
